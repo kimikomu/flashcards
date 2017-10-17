@@ -15,6 +15,7 @@ const cardRoutes = require('./routes/cards');
 app.use(mainRoutes);
 app.use('/cards', cardRoutes);
 
+// errors
 app.use((req, res, next) => {
 	const err = new Error('Not Found');
 	err.status = 404;
@@ -27,6 +28,7 @@ app.use((err, req, res, next) => {
 	res.render('error', err);
 });
 
+// console notification
 app.listen(3000, () => {
 	console.log('The application is running on localhost 3000.');
 });

@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
 
 	// go to question side if a side is not provided
 	if(!side) {
-		res.redirect(`/cards/${id}?side=question`);		
+		return res.redirect(`/cards/${id}?side=question`);		
 	}
 	const name = req.cookies.username;
 	const text = cards[id][side];

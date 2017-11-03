@@ -5,4 +5,10 @@ block content
         h2= text
         if hint
             p 
+                //- shows the hint
                 i Hint: #{hint}
+        //- shows the question or answer side
+        a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+        br
+        //- link to another random card
+        a(href='/cards') Next card
